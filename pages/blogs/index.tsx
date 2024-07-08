@@ -23,10 +23,13 @@ const Blogs: NextPage<{ blogs: IRepoContent[] }> = ({ blogs }) => {
       </h1>
 
       <section
-        className={`${MyanmarEthnicSans.variable} font-blog grid grid-cols-1 gap-4 py-4 lg:grid-cols-2`}
+        style={{
+          viewTransitionName: 'blog',
+        }}
+        className={`${MyanmarEthnicSans.variable} grid grid-cols-1 gap-4 py-4 font-blog lg:grid-cols-2`}
       >
         {blogs.map((blog, idx) => (
-          <Link aria-labelledby="blog-name" href={`/blogs/${blog.name}`} key={idx}>
+          <Link aria-labelledby="blog-name" href={`/blogs/${blog.name}`} key={blog.name}>
             <article className="relative h-56 overflow-hidden rounded-lg">
               <Image
                 className={'h-full w-full object-cover'}

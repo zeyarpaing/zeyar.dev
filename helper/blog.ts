@@ -66,10 +66,16 @@ export class BlogService {
   }
 
   static getBlogContent(blogName: string): Promise<IBlogContent> {
-    return fetch(BlogService.getBlogUrl(blogName))
-      .then((res) => res.text())
+    return octokit
+      .request('GET /repos/{owner}/{repo}/contents/{path}', {
+        path: blogName + '/index.md',
+        owner: 'zeyarpaing',
+        repo: 'blogs',
+      })
       .then(async (res) => {
-        const rawMd = res as string;
+        // @ts-expect-error - content is not in the type
+        const base64 = res.data.content;
+        const rawMd = Buffer.from(base64, 'base64').toString();
         const { data, content } = matter(rawMd);
         const metaData = data as IBlogMeta;
         const mdxSource = await serialize(content, {

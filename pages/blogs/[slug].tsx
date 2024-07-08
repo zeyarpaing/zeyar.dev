@@ -20,30 +20,36 @@ const BlogDetail: NextPage<{ blog: IBlogContent }> = ({ blog }) => {
       title={blog.title}
       description={blog.description}
     >
-      <picture className="mt-20 block h-64 w-full">
-        <Image
-          src={blog.image}
-          alt={blog.title}
-          className={'h-full w-full rounded-xl object-cover'}
-          width={2500}
-          height={1000}
-          loading="eager"
-        />
-      </picture>
-      <article
-        className={`${MyanmarEthnicSans.variable} ${styles.blogDetail} font-blog prose lg:prose-xl`}
+      <div
+        style={{
+          viewTransitionName: 'blog',
+        }}
       >
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
-        ></link>
-        <MDXRemote
-          {...blog?.content}
-          components={{
-            img: (props: any) => <Image width={1500} height={1500} alt="blog image" {...props} />,
-          }}
-        />
-      </article>
+        <picture className="mt-20 block h-64 w-full">
+          <Image
+            src={blog.image}
+            alt={blog.title}
+            className={'h-full w-full rounded-xl object-cover'}
+            width={2500}
+            height={1000}
+            loading="eager"
+          />
+        </picture>
+        <article
+          className={`${MyanmarEthnicSans.variable} ${styles.blogDetail} prose lg:prose-xl font-blog`}
+        >
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
+          ></link>
+          <MDXRemote
+            {...blog?.content}
+            components={{
+              img: (props: any) => <Image width={1500} height={1500} alt="blog image" {...props} />,
+            }}
+          />
+        </article>
+      </div>
     </Layout>
   );
 };
