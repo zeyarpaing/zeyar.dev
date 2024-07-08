@@ -4,7 +4,6 @@ import React from 'react';
 import { BlogService, IRepoContent } from 'helper/blog';
 import Image from 'next/image';
 import Link from 'next/link';
-import PatternBackground from '@/components/shared/PatternBackground';
 import localFont from '@next/font/local';
 
 const MyanmarEthnicSans = localFont({

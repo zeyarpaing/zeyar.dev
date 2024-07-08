@@ -50,6 +50,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.4)
+      use-view-transitions:
+        specifier: ^1.0.16
+        version: 1.0.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@types/node':
         specifier: 17.0.31
@@ -1939,6 +1942,12 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  use-view-transitions@1.0.16:
+    resolution: {integrity: sha512-6suGH0QsKUCLXQqs9uRV6gL4TxNS3eTRT/uPpYQRZ7rh7sJw0ULm+8ZAJfUsaWRSKumKC4Yg6763do9m1MXI+w==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -4233,6 +4242,11 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.0
+
+  use-view-transitions@1.0.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   util-deprecate@1.0.2: {}
 

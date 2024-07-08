@@ -1,24 +1,22 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
-import React from 'react';
-import Layout from 'components/layout/Layout';
-import { Button } from 'components/shared/Button';
-import { Project, Technology } from 'types';
-import { courses, education, experiences, projects, technologies, voluntaries } from 'data/info';
+import { projects } from '@/data/projects';
+import profileImage from '@/public/assets/image/memoji.webp';
+import Rings from '@/svgs/Rings';
+import EducationCard from 'components/home/EducationCard';
 import ExperienceCard from 'components/home/ExperienceCard';
 import TechnologyCard from 'components/home/TechnologyCard';
-import EducationCard from 'components/home/EducationCard';
 import VoluntaryCard from 'components/home/VoluntaryCard';
-import Link from 'next/link';
+import Layout from 'components/layout/Layout';
 import ProjectCard from 'components/project/ProjectCard';
-import BlurredBox from 'components/shared/BlurredBox';
-import { useScrollReveal } from 'hooks/useScrollReveal';
-import profileImage from '@/public/assets/image/memoji.webp';
-import { contactInfo } from '../data/app-data';
-import ContactItem from '../components/home/ContactItem';
+import { Button } from 'components/shared/Button';
 import PatternBackground from 'components/shared/PatternBackground';
-import Rings from '@/svgs/Rings';
-import QRX from '@qr-x/react';
+import { courses, education, experiences, technologies, voluntaries } from 'data/info';
+import { useScrollReveal } from 'hooks/useScrollReveal';
+import type { GetStaticProps, NextPage } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Project, Technology } from 'types';
+import ContactItem from '../components/home/ContactItem';
+import { contactInfo } from '../data/app-data';
 
 interface HomeProps {
   projects: Project[];
@@ -150,6 +148,7 @@ const BriefSection = () => (
     </div>
   </section>
 );
+
 const ProjectSection = () => {
   const { ref } = useScrollReveal();
   return (

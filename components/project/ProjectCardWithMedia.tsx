@@ -11,18 +11,16 @@ const ProjectCard: FC<{
   return (
     <Link
       className={'group'}
-      href={project.demoUrl}
-      rel="noopener noreferrer"
-      target="_blank"
+      href={`/projects/${project.slug}`}
       aria-label={`${project.name} ${project.type}`}
     >
       <div
         style={{
           backgroundImage: `url(${project.media})`,
         }}
-        className={`relative z-[1] h-[364px] overflow-hidden rounded-2xl`}
+        className={`bg-primary-foreground relative z-[1] h-[364px] overflow-hidden rounded-2xl bg-contain`}
       >
-        <div className={`absolute inset-0`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-t from-neutral-950/80`}></div>
         <div
           className={`absolute bottom-5 left-1/2 flex w-full max-w-[80%] -translate-x-1/2 scale-90 flex-wrap gap-4 rounded-2xl p-4 transition-transform group-hover:scale-100 ${
             vertical ? 'flex-col items-center' : ''

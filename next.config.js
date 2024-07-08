@@ -4,6 +4,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   swcMinify: true,
+  experimental: {
+    scrollRestoration: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },

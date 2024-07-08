@@ -72,6 +72,9 @@
   }
 }
 
+@view-transition {
+  navigation: auto;
+}
 html {
   --color-backdrop: hsl(0, 0%, 14%);
   @apply scroll-smooth;

@@ -16,10 +16,11 @@ export type Project = {
   name: string;
   logo: string;
   type: string;
-  description: string;
-  demoUrl: string;
+  slug: string;
   color: string;
   media?: string;
+  liveUrl: string;
+  description: string;
 };
 
 export type Experience = {
