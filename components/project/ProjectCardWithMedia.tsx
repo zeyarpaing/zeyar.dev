@@ -2,14 +2,12 @@ import { Project } from 'types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import styles from 'styles/Project.module.css';
 
 const ProjectCard: FC<{
   project: Project;
-  showDots?: boolean;
   vertical?: boolean;
 }> = (props) => {
-  const { project, showDots, vertical } = props;
+  const { project, vertical } = props;
   return (
     <Link
       className={'group'}
@@ -22,28 +20,20 @@ const ProjectCard: FC<{
         style={{
           backgroundImage: `url(${project.media})`,
         }}
-        className={`${styles.projectMedia} relative h-[364px] overflow-hidden rounded-2xl z-[1]`}
+        className={`relative z-[1] h-[364px] overflow-hidden rounded-2xl`}
       >
-        {/*<Image*/}
-        {/*  className="w-full h-full object-cover group-hover:scale-110 transition-transform"*/}
-        {/*  src={project.media!}*/}
-        {/*  alt={project.name}*/}
-        {/*  width={2000}*/}
-        {/*  height={1800}*/}
-        {/*/>*/}
         <div className={`absolute inset-0`}></div>
         <div
-          className={`group-hover:scale-100 scale-90 transition-transform absolute bottom-5 left-1/2 -translate-x-1/2 max-w-[80%] w-full flex gap-4 flex-wrap p-4 rounded-2xl ${
+          className={`absolute bottom-5 left-1/2 flex w-full max-w-[80%] -translate-x-1/2 scale-90 flex-wrap gap-4 rounded-2xl p-4 transition-transform group-hover:scale-100 ${
             vertical ? 'flex-col items-center' : ''
-          } bg-darkblue bg-opacity-50 backdrop-blur-md border border-gray-300 border-opacity-50`}
+          } border border-gray-300 border-opacity-50 bg-darkblue bg-opacity-50 backdrop-blur-md`}
         >
           <Image src={project.logo} width={50} height={50} alt={project.name} />
           <article className={vertical ? 'text-center' : ''}>
-            <h3 className="font-bold text-lg">{project.name}</h3>
-            <p className="text-gray-200 text-sm">{project.type}</p>
+            <h3 className="text-lg font-bold">{project.name}</h3>
+            <p className="text-sm text-gray-200">{project.type}</p>
           </article>
         </div>
-        {/*<p className="text-gray-300 mt-3 text-sm">{project.description}</p>*/}
       </div>
     </Link>
   );

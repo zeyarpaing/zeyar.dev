@@ -18,6 +18,7 @@ import { contactInfo } from '../data/app-data';
 import ContactItem from '../components/home/ContactItem';
 import PatternBackground from 'components/shared/PatternBackground';
 import Rings from '@/svgs/Rings';
+import QRX from '@qr-x/react';
 
 interface HomeProps {
   projects: Project[];
@@ -109,7 +110,6 @@ const LandingSection = () => (
         />
       </div>
       <div className="mx-2 flex max-w-2xl flex-col items-center text-center">
-        {/* <p className="font-light">Hi there, I’m</p> */}
         <h1 className="my-3 bg-gradient-to-br from-white to-zinc-400/90 bg-clip-text text-3xl font-extrabold text-transparent md:text-4xl">
           Hi, I’m Zeyar Paing.
         </h1>
@@ -154,10 +154,15 @@ const ProjectSection = () => {
   const { ref } = useScrollReveal();
   return (
     <section ref={ref} className="my-20">
-      <h2 className="section-header mb-7">Featured Projects</h2>
+      <div className="mb-7 flex items-center justify-between">
+        <h2 className="section-header">Featured Projects</h2>
+        <Button href="/projects" variant="link">
+          See all projects
+        </Button>
+      </div>
       <div className="project-container grid grid-cols-1 gap-8 lg:grid-cols-2">
         {projects.map((project, idx) => (
-          <ProjectCard showDots key={idx} project={project} />
+          <ProjectCard key={idx} project={project} />
         ))}
       </div>
     </section>

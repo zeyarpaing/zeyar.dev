@@ -2,13 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 0, 0%, 9%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 240, 2%, 8%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
 html {
-  --color-backdrop: hsl(240, 2%, 8%);
+  --color-backdrop: hsl(0, 0%, 14%);
   @apply scroll-smooth;
 }
 
 body {
-  @apply h-full overflow-x-hidden bg-backdrop font-primary tracking-wide text-white md:!overflow-y-auto;
+  @apply text-background h-full overflow-x-hidden bg-primary font-primary tracking-wide md:!overflow-y-auto;
   z-index: -5;
   scroll-behavior: smooth;
   background-image: url('/assets/image/star-bg.webp');
@@ -40,7 +110,7 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  @apply outline-dashed outline-2 outline-offset-2 outline-primary-light;
+  @apply outline-dashed outline-2 outline-offset-2 outline-green-400;
   transition: outline-offset 100ms;
 }
 
@@ -69,7 +139,7 @@ button:focus-visible {
 
 input,
 textarea {
-  @apply border border-[#555555] bg-[#212121] bg-opacity-50 backdrop-blur-md focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary-light focus:ring-opacity-40;
+  @apply border border-[#555555] bg-[#212121] bg-opacity-50 backdrop-blur-md focus:border-primary focus:outline-0 focus:ring-2 focus:ring-green-400 focus:ring-opacity-40;
 }
 
 .before-animate {

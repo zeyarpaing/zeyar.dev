@@ -1,19 +1,17 @@
 import { Project } from 'types';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from 'styles/Project.module.css';
 import { FC } from 'react';
 
 const ProjectCard: FC<{
   project: Project;
-  showDots?: boolean;
   vertical?: boolean;
 }> = (props) => {
-  const { project, showDots, vertical } = props;
+  const { project, vertical } = props;
   return (
     <Link
       style={{ color: project.color }}
-      className={(showDots ? styles.projectCard : '') + ' group'}
+      className={'group'}
       href={project.demoUrl}
       rel="noopener noreferrer"
       target="_blank"

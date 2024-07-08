@@ -4,14 +4,8 @@ import { BlogService, IBlogContent } from 'helper/blog';
 import { MDXRemote } from 'next-mdx-remote';
 import styles from 'styles/Blogs.module.css';
 import Image from 'next/image';
-import { useSetGlobalStyle } from 'hooks/useSetGlobalStyle';
-
-const backdropColor = {
-  ['--color-backdrop' as string]: 'hsl(226deg 42% 10%)',
-} as { string: string };
 
 const BlogDetail: NextPage<{ blog: IBlogContent }> = ({ blog }) => {
-  // useSetGlobalStyle(backdropColor);
   return (
     <Layout
       image={blog.image}
@@ -37,10 +31,7 @@ const BlogDetail: NextPage<{ blog: IBlogContent }> = ({ blog }) => {
         <MDXRemote
           {...blog?.content}
           components={{
-            img: (props) => (
-              // @ts-ignore
-              <Image width={1500} height={1500} alt="blog image" {...props} />
-            ),
+            img: (props: any) => <Image width={1500} height={1500} alt="blog image" {...props} />,
           }}
         />
       </article>
@@ -53,7 +44,7 @@ export const getStaticPaths = async () => {
   const paths = data.map((blog) => ({
     params: { slug: blog?.name },
   }));
-  return { paths, fallback: false,  };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -69,7 +60,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       blog,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 };
 
