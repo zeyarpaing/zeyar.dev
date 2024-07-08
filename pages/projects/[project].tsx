@@ -1,10 +1,6 @@
-import { GetStaticProps, NextPage } from 'next';
-import Layout from 'components/layout/Layout';
-import { BlogService, IBlogContent } from 'helper/blog';
-import { MDXRemote } from 'next-mdx-remote';
-import styles from 'styles/Blogs.module.css';
-import Image from 'next/image';
 import { projects } from '@/data/projects';
+import Layout from 'components/layout/Layout';
+import { GetStaticProps, NextPage } from 'next';
 import { ValueOf } from 'next/dist/shared/lib/constants';
 
 const ProjectDetail: NextPage<{ project: ValueOf<typeof projects> }> = ({ project }) => {

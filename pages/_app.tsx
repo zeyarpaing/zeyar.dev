@@ -12,6 +12,7 @@ const MonaSans = localFont({
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  // @ts-expect-error - router is not a valid prop
   useNextRouterViewTransitions(router);
   return (
     <div className={`${MonaSans.variable} font-primary`}>
