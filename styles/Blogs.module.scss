@@ -1,0 +1,76 @@
+.blogDetail {
+  @apply mx-auto mb-14 mt-4 max-w-2xl md:mt-9;
+
+  h1 {
+    @apply my-3 text-3xl font-bold;
+  }
+  h2,
+  h3 {
+    @apply mb-1 mt-5 text-xl font-bold;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply mb-1 mt-4 text-lg font-bold;
+  }
+  p {
+    @apply mt-2 leading-[1.6];
+  }
+  a {
+    @apply text-cyan-400 hover:underline;
+  }
+  img {
+    @apply rounded-xl;
+  }
+
+  /* Code snippets */
+  pre > code {
+    @apply my-5 grid py-4;
+  }
+  code {
+    @apply overflow-auto rounded-lg border border-slate-700/50 px-2 shadow-md;
+    background-color: rgba(70, 70, 70, 0.38);
+  }
+  code::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  code::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  code::-webkit-scrollbar-thumb {
+    @apply rounded-xl bg-gray-700/80 text-slate-700;
+    border: 0.2px solid currentColor;
+  }
+  pre code:not([data-line-numbers]) > * {
+    @apply px-3;
+  }
+
+  code[data-line-numbers] {
+    counter-reset: line;
+  }
+
+  code[data-line-numbers] > .line::before {
+    counter-increment: line;
+    content: counter(line);
+    @apply mr-5 inline-block w-4 text-right text-gray-400;
+  }
+
+  code[data-line-numbers-max-digits='2'] > .line::before {
+    width: 2rem;
+  }
+
+  code[data-line-numbers-max-digits='3'] > .line::before {
+    width: 3rem;
+  }
+  code .line {
+    @apply rounded-md py-0.5;
+  }
+  code .word {
+    @apply rounded bg-cyan-300/30 px-1;
+  }
+  code .line.highlighted {
+    @apply -translate-x-2 rounded-l-none border-l-4 border-emerald-500 bg-emerald-400/20 pl-1;
+  }
+}
