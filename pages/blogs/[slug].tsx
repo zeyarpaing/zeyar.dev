@@ -4,6 +4,13 @@ import { BlogService, IBlogContent } from 'helper/blog';
 import { MDXRemote } from 'next-mdx-remote';
 import styles from 'styles/Blogs.module.css';
 import Image from 'next/image';
+import localFont from '@next/font/local';
+
+const MyanmarEthnicSans = localFont({
+  src: '../../styles/fonts/MyanmarEthnicSans.woff2',
+  variable: '--font-myan',
+  fallback: ['sans-serif'],
+});
 
 const BlogDetail: NextPage<{ blog: IBlogContent }> = ({ blog }) => {
   return (
@@ -23,7 +30,9 @@ const BlogDetail: NextPage<{ blog: IBlogContent }> = ({ blog }) => {
           loading="eager"
         />
       </picture>
-      <article className={`${styles.blogDetail} prose lg:prose-xl`}>
+      <article
+        className={`${MyanmarEthnicSans.variable} ${styles.blogDetail} font-blog prose lg:prose-xl`}
+      >
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"

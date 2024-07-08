@@ -9,18 +9,6 @@ const MonaSans = localFont({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  if (typeof window !== 'undefined') {
-    if (
-      window.localStorage.theme === 'dark' ||
-      (!('theme' in window.localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }
-
   return (
     <div className={`${MonaSans.variable} font-primary`}>
       <Component {...pageProps} />

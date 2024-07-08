@@ -11,6 +11,7 @@ module.exports = {
     },
     fontFamily: {
       primary: ['var(--font-mona-sans)', 'sans-serif'],
+      blog: ['var(--font-mona-sans)', 'var(--font-myan)', 'sans-serif'],
     },
     extend: {
       colors: {

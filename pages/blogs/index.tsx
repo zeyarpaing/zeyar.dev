@@ -5,6 +5,13 @@ import { BlogService, IRepoContent } from 'helper/blog';
 import Image from 'next/image';
 import Link from 'next/link';
 import PatternBackground from '@/components/shared/PatternBackground';
+import localFont from '@next/font/local';
+
+const MyanmarEthnicSans = localFont({
+  src: '../../styles/fonts/MyanmarEthnicSans.woff2',
+  variable: '--font-myan',
+  fallback: ['sans-serif'],
+});
 
 const Blogs: NextPage<{ blogs: IRepoContent[] }> = ({ blogs }) => {
   return (
@@ -16,7 +23,9 @@ const Blogs: NextPage<{ blogs: IRepoContent[] }> = ({ blogs }) => {
         Blogs
       </h1>
 
-      <section className="grid grid-cols-1 gap-4 py-4 lg:grid-cols-2">
+      <section
+        className={`${MyanmarEthnicSans.variable} font-blog grid grid-cols-1 gap-4 py-4 lg:grid-cols-2`}
+      >
         {blogs.map((blog, idx) => (
           <Link aria-labelledby="blog-name" href={`/blogs/${blog.name}`} key={idx}>
             <article className="relative h-56 overflow-hidden rounded-lg">
