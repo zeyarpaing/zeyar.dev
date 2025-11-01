@@ -60,13 +60,44 @@ const options: Partial<Options> = {
   },
   tokensMap: {},
 };
+let blogByNameCache: { [key: string]: IBlogContent } = {};
+let blogsCache: (
+  | {
+      date: string;
+      image: string;
+      type: string;
+      encoding: string;
+      size: number;
+      name: string;
+      path: string;
+      sha: string;
+      url: string;
+      git_url: string;
+      html_url: string;
+      download_url: string;
+      _links: {
+        git: string;
+        self: string;
+        html: string;
+      };
+      title: string;
+      tags?: string[] | undefined;
+      description: string;
+    }
+  | undefined
+)[] = [];
+
 export class BlogService {
   static getBlogUrl(blogName: string) {
     return `${ghRawUrl}/${blogName}/index.md`;
   }
 
-  static getBlogContent(blogName: string): Promise<IBlogContent> {
-    return octokit
+  static async getBlogContent(blogName: string): Promise<IBlogContent> {
+    if (blogByNameCache[blogName]) {
+      return blogByNameCache[blogName];
+    }
+
+    const response = await octokit
       .request('GET /repos/{owner}/{repo}/contents/{path}', {
         path: blogName + '/index.md',
         owner: 'zeyarpaing',
@@ -91,6 +122,10 @@ export class BlogService {
           content: mdxSource,
         };
       });
+
+    blogByNameCache[blogName] = response;
+
+    return response;
   }
 
   static async getBlogs() {
@@ -101,6 +136,11 @@ export class BlogService {
         repo: 'blogs',
       },
     );
+
+    if (blogsCache.length > 0) {
+      return blogsCache;
+    }
+
     return ghRequest.then(async (response) => {
       let data = response.data.map((blog) => {
         if (blog.name[0] === '_') return;
@@ -119,9 +159,11 @@ export class BlogService {
       });
       try {
         let dataList = await Promise.all(data);
-        return Promise.resolve(dataList.filter(Boolean));
+        const res = dataList.filter(Boolean);
+        blogsCache = res;
+        return res;
       } catch (e) {
-        return Promise.reject(e);
+        return [];
       }
     });
   }

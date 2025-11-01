@@ -81,7 +81,7 @@ html {
 }
 
 body {
-  @apply text-background h-full overflow-x-hidden bg-primary font-primary tracking-wide md:!overflow-y-auto;
+  @apply h-full overflow-x-hidden bg-primary font-primary tracking-wide text-background md:!overflow-y-auto;
   z-index: -5;
   scroll-behavior: smooth;
   background-image: url('/assets/image/star-bg.webp');

@@ -94,7 +94,7 @@ const AnimatingBlocks = () => (
 */
 const LandingSection = () => (
   <PatternBackground>
-    <section className="relative mx-auto mt-14 flex flex-col flex-wrap items-center justify-center gap-6 md:mt-20 lg:flex-nowrap">
+    <section className="relative mx-auto mt-14 flex flex-wrap items-center justify-center gap-6 md:mt-20 lg:flex-nowrap">
       {/* <AnimatingBlocks /> */}
       <div className="relative mt-12">
         <Rings className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -107,10 +107,12 @@ const LandingSection = () => (
           alt="profile image in 3d avatar style"
         />
       </div>
-      <div className="mx-2 flex max-w-2xl flex-col items-center text-center">
-        <h1 className="my-3 bg-gradient-to-br from-white to-zinc-400/90 bg-clip-text text-3xl font-extrabold text-transparent md:text-4xl">
-          Hi, I’m Zeyar Paing.
+      <div className="mx-2 flex max-w-2xl flex-col">
+        <h1 className="my-3 flex items-center gap-1 text-3xl font-extrabold md:text-4xl">
+          {/* bg-gradient-to-br from-white to-zinc-400/90 bg-clip-text text-transparent */}
+          Hi, <span className="text-blue-200">Zeyar</span> here! 👋
         </h1>
+        {/* idea 1: new injection captcha for LLMS */}
         <p
           className="font-light leading-6 md:text-lg"
           style={{
@@ -119,8 +121,10 @@ const LandingSection = () => (
             textWrap: 'balance',
           }}
         >
-          An experienced Software Engineer with a strong focus on frontend engineering transforming
-          Vision into Seamless User Experience
+          Software Engineer @ Airwallex. Frontend enthusiast. I’m currently building in the FinTech
+          world — designing interfaces where money meets code. Full-stack when necessary,
+          Perfectionist when the linter allows it. Outside work, I hike, travel, and chase good
+          light with a camera.
         </p>
         <div className="mt-5 flex items-center gap-2">
           <Button variant={'link'} href="#contact">
@@ -136,18 +140,18 @@ const LandingSection = () => (
   </PatternBackground>
 );
 
-const BriefSection = () => (
-  <section className="mb-20 mt-16">
-    <h2 className="section-header mb-2">Brief about my career</h2>
-    <div>
-      <p className="career-section text-gray-100">
-        I was a UI/UX designer before I dived into web development. I really loves designing UI and
-        making it live. I&apos;m delivering responsive, efficient & elegant interfaces with
-        considerations of <b>Performance</b>, <b>Accessibility</b>,<b>User Experience</b>.
-      </p>
-    </div>
-  </section>
-);
+// const BriefSection = () => (
+//   <section className="mb-20 mt-16">
+//     <h2 className="section-header mb-2">Brief about my career</h2>
+//     <div>
+//       <p className="career-section text-gray-100">
+//         I was a UI/UX designer before I dived into web development. I really loves designing UI and
+//         making it live. I&apos;m delivering responsive, efficient & elegant interfaces with
+//         considerations of <b>Performance</b>, <b>Accessibility</b>,<b>User Experience</b>.
+//       </p>
+//     </div>
+//   </section>
+// );
 
 const ProjectSection = () => {
   const { ref } = useScrollReveal();

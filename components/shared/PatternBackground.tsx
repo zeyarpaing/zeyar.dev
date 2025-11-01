@@ -1,11 +1,13 @@
+import DottedPattern from '@/components/shared/DottedPattern';
 import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 function PatternBackground({ children }: { children: ReactNode; homePage?: boolean }) {
   return (
     <section>
       <div>{children}</div>
+
       <div className="absolute inset-0 z-[-1] bg-neutral-500/20 opacity-100 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]">
-        {/* <svg
+        <svg
           aria-hidden="true"
           className="fill-white/2.5 absolute inset-x-0 inset-y-[-50%] h-[200%] w-full stroke-white/5 opacity-0 mix-blend-overlay"
         >
@@ -27,7 +29,7 @@ function PatternBackground({ children }: { children: ReactNode; homePage?: boole
             <rect strokeWidth="0" width="73" height="57" x="144" y="56"></rect>
             <rect strokeWidth="0" width="73" height="57" x="504" y="168"></rect>
           </svg>
-        </svg> */}
+        </svg>
       </div>
     </section>
   );
