@@ -2,37 +2,49 @@ import type { Certifications, Education, Experience, Technology, Voluntary } fro
 
 export const experiences: Experience[] = [
   {
-    companyName: 'Seak',
-    year: 0.4,
-    websiteLink: 'https://seak.ai/',
-    position: 'Full Stack Engineer',
-    description: `Built and maintained Seak's Supplier Mobile App from scratch using React Native and React ecosystem. Worked directly with the CEO, supplier team and UI/UX to define features and incorporate user feedback
- from beta test users. Developed Django server app to serve REST APIs for the mobile app and Cron jobs for notifications and 
-automatic product publishing`,
+    companyName: 'OpenPay',
+    websiteLink: 'https://getopenpay.com',
+    position: 'Software Engineer',
+    description:
+      'Designed and maintained the embedded payment client library and hosted checkout page. Built integrations for Apple Pay, Google Pay, and Crypto, handling ~50% of payment volume. Developed processor-agnostic APIs, implemented PCI-compliant flows, and integrated analytics for observability.',
+    start: 'Aug 2024',
+    end: 'Present',
+    current: true,
   },
   {
-    companyName: 'Rezerv',
-    year: 2,
-    websiteLink: 'https://rezerv.co/',
-    position: 'Lead Frontend Developer',
+    companyName: 'Seak',
+    websiteLink: 'https://seak.ai/',
+    position: 'Fullstack Engineer',
     description:
-      'Building user interfaces of Rezeve SaaS platform using Next.Js, React and other related technologies. I am also responsible for the maintenance of the existing codebase.',
+      'Built the Supplier Mobile App from scratch using React Native and developed Django-based REST APIs. Collaborated with leadership and designers to refine user journeys. Optimized data models and API performance for low-connectivity areas and contributed to system design for scalability.',
+    start: 'March 2024',
+    end: 'August 2024',
+  },
+  {
+    companyName: 'Codigo / Rezerv',
+    websiteLink: 'https://rezerv.co/',
+    position: 'Lead Front-End Developer',
+    description:
+      'Led a team of six Front-End developers, building interfaces for B2B/B2C portals and mobile apps. Collaborated with PMs on sprint planning and mentored developers via code reviews. Worked with backend/design teams to refine workflows and improved frontend performance and AWS deployment workflows.',
+    start: 'Jun 2022',
+    end: 'Feb 2024',
   },
   {
     companyName: 'Bilions',
-    position: 'Frontend Developer',
+    position: 'Front-End Developer (Part-time)',
     description:
-      "Implemented user-friendly web applications designed by UI/UX designer. I've developed a good way of communication with UI/UX designer which benefits in theming & asset sharing for the app.  I’ve improved in organizing the components for better DevX and readability, refactoring, state management and better network requests",
-    year: 0.9,
+      'Built user-facing screens for telemedicine, e-commerce, and POS products. Delivered responsive and performant UIs across mobile and web projects within tight timelines.',
+    start: 'Oct 2021',
+    end: 'Jun 2022',
     websiteLink: 'https://www.bilions.org/',
   },
   {
-    companyName: "Partner Associates Int'l Co.,Ltd.",
+    companyName: 'Partner Associates',
     position: 'Junior Application Developer',
     description:
-      'Joined as an Internship Student responsible not only for coding web UIs but also for designing UI/UX for mobile and web applications.' +
-      " After almost a year, I've been promoted to Junior Application Developer. I've designed many elegant and usable UI and developed web interfaces with the best performance and design. I've gained a lot of experience about layouts, network request and refactoring techniques",
-    year: 1.4,
+      'Designed and implemented UIs for enterprise tools, improving accessibility and usability. Built performant Front-End features and supported backend integration. Contributed to team learning through UI/UX and new technology adoption.',
+    start: 'Jan 2021',
+    end: 'Jun 2022',
     websiteLink: 'https://www.partnerassociates.com/',
   },
 ];
@@ -96,14 +108,29 @@ export const technologies: Technology[] = [
 
 export const education: Education[] = [
   {
-    name: 'University of Computer Studies, Yangon',
+    school: 'University of Greenwich',
+    degree: 'B.Sc. Computing',
+    start: 'Jun 2024',
+    end: 'Jul 2025',
     description:
-      "Started as a bachelor student in 2019. Specialized in Knowledge Engineering Major of Computer Science Category. During the periods of learning, I've learned the fundamentals of Computer Sciences such as Data Structures & Algorithms, Programming Foundations, Basic Database Systems and Web Development Foundations ",
+      'The program covers core subjects needed for modern software development lifecycles. Key areas include Requirement Management, Human Computer Interaction, Mobile Development and Enterprise Web Development.',
+    graduated: true,
   },
   {
-    name: 'Turing Programming Training Center',
+    school: 'NCC Education',
+    degree: 'Diploma in Computing',
+    start: 'Jan 2023',
+    end: 'Jan 2024',
     description:
-      "Joined a course taught by Ko Thet Khine, Javascript & React Course. I've learned how to use JavaScript in an efficient and pragmatic way. After completing this course, I started developing React apps and involved in Js coding challenges",
+      'After taking an academic break during the covid-19 period, this program became the starting point for returning to a degree path. Studied Network Security, Information System Analysis, Database Administration, Web Development and Information Systems Analysis.',
+  },
+  {
+    school: 'University of Computer Studies, Yangon',
+    degree: 'B. C. Sc. Foundation',
+    start: 'Nov 2018',
+    end: 'March 2020',
+    description:
+      'My first university, where I studied foundations of computer science, hardware concepts and basic software development. After completing the third semester, I took a break and later moved toward a new academic direction.',
   },
 ];
 

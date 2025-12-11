@@ -112,7 +112,7 @@ const LandingSection = () => (
       </div>
       <div className="flex max-w-xl flex-col items-center text-center lg:items-start lg:text-left">
         <h1 className="mb-6 flex items-center gap-2 text-2xl font-extrabold md:text-4xl">
-          Hi, <span className="text-amber-200">Zeyar</span> here! 👋
+          Hi, <span className="text-emerald-300">Zeyar</span> here! 👋
         </h1>
 
         <div className="space-y-4 leading-relaxed text-zinc-300 md:text-lg">

@@ -24,13 +24,13 @@ export type Project = {
 };
 
 export type Experience = {
-  year?: number;
-  current?: boolean;
   companyName: string;
   description: string;
   position: string;
   websiteLink: string;
-  joined?: Date;
+  start: string;
+  end: string;
+  current?: boolean;
 };
 
 export type Technology = {
@@ -41,8 +41,12 @@ export type Technology = {
 };
 
 export type Education = {
-  name: string;
+  school: string;
+  degree: string;
+  start: string;
+  end: string;
   description: string;
+  graduated?: boolean;
 };
 
 export type Certifications = {
