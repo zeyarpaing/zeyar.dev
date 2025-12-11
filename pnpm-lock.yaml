@@ -32,6 +32,9 @@ importers:
       next-mdx-remote:
         specifier: ^4.2.0
         version: 4.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      posthog-js:
+        specifier: ^1.304.0
+        version: 1.304.0
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -254,6 +257,9 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@posthog/core@1.7.1':
+    resolution: {integrity: sha512-kjK0eFMIpKo9GXIbts8VtAknsoZ18oZorANdtuTj1CbgS28t4ZVq//HAWhnxEuXRTrtkd+SUJ6Ux3j2Af8NCuA==}
 
   '@qr-x/core@1.0.0':
     resolution: {integrity: sha512-vzrkKicqbEAmN2tu1Y9sdRplqh73rYQ9HIf6jsSojkEdyymVaXk63z2TH0h8acErjEcVLM1ly+Q7+nHs6QBDSg==}
@@ -549,8 +555,15 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  core-js@3.47.0:
+    resolution: {integrity: sha512-c3Q2VVkGAUyupsjRnaNX6u8Dq2vAdzm9iuPj5FW0fRxzlxgq9Q39MDq10IvmQSpLgHQNyQzQmOo6bgGHmH3NNg==}
+
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
+    engines: {node: '>= 8'}
+
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
   cssesc@3.0.0:
@@ -822,6 +835,9 @@ packages:
 
   fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
+
+  fflate@0.4.8:
+    resolution: {integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==}
 
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -1538,6 +1554,12 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  posthog-js@1.304.0:
+    resolution: {integrity: sha512-revqoppmJ5y1Oa9iRUb3P8w1htfxZdrSAe+elSNMxvl7wxY62qWN7Q0kE5Sk81o1qLHa6drPhVKa/dppWOfSUw==}
+
+  preact@10.28.0:
+    resolution: {integrity: sha512-rytDAoiXr3+t6OIP3WGlDd0ouCUG1iCWzkcY3++Nreuoi17y6T5i/zRhe6uYfoVcxq6YU+sBtJouuRDsq8vvqA==}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -1989,6 +2011,9 @@ packages:
   vscode-textmate@8.0.0:
     resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
 
+  web-vitals@4.2.4:
+    resolution: {integrity: sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==}
+
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
 
@@ -2228,6 +2253,10 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@posthog/core@1.7.1':
+    dependencies:
+      cross-spawn: 7.0.6
 
   '@qr-x/core@1.0.0':
     dependencies:
@@ -2530,7 +2559,15 @@ snapshots:
 
   concat-map@0.0.1: {}
 
+  core-js@3.47.0: {}
+
   cross-spawn@7.0.3:
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+
+  cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -2688,7 +2725,7 @@ snapshots:
       eslint: 8.15.0
       eslint-import-resolver-node: 0.3.7
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.27.5(eslint@8.15.0))(eslint@8.15.0)
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.27.5(eslint@8.15.0))(eslint@8.15.0))(eslint@8.15.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.15.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.15.0)
       eslint-plugin-react: 7.32.2(eslint@8.15.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.15.0)
@@ -2711,7 +2748,7 @@ snapshots:
     dependencies:
       debug: 4.3.4
       eslint: 8.15.0
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.27.5(eslint@8.15.0))(eslint@8.15.0))(eslint@8.15.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.15.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.2
@@ -2730,7 +2767,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.27.5(eslint@8.15.0))(eslint@8.15.0))(eslint@8.15.0):
+  eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.57.1(eslint@8.15.0)(typescript@4.6.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.15.0):
     dependencies:
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
@@ -2930,6 +2967,8 @@ snapshots:
   fastq@1.15.0:
     dependencies:
       reusify: 1.0.4
+
+  fflate@0.4.8: {}
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -3846,6 +3885,16 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  posthog-js@1.304.0:
+    dependencies:
+      '@posthog/core': 1.7.1
+      core-js: 3.47.0
+      fflate: 0.4.8
+      preact: 10.28.0
+      web-vitals: 4.2.4
+
+  preact@10.28.0: {}
+
   prelude-ls@1.2.1: {}
 
   prettier-plugin-tailwindcss@0.6.5(prettier@3.3.2):
@@ -4305,6 +4354,8 @@ snapshots:
   vscode-oniguruma@1.7.0: {}
 
   vscode-textmate@8.0.0: {}
+
+  web-vitals@4.2.4: {}
 
   webidl-conversions@3.0.1: {}
 
