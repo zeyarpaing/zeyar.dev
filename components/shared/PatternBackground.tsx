@@ -1,4 +1,4 @@
-import DottedPattern from '@/components/shared/DottedPattern';
+// import DottedPattern from '@/components/shared/DottedPattern';
 import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 function PatternBackground({ children }: { children: ReactNode; homePage?: boolean }) {
