@@ -21,6 +21,7 @@ export type Project = {
   media?: string;
   liveUrl: string;
   description: string;
+  tags?: string[];
 };
 
 export type Experience = {

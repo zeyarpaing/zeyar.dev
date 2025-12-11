@@ -30,7 +30,7 @@ const Home: NextPage<HomeProps> = () => {
         {/* <BriefSection /> */}
         <ProjectSection />
         <ExperienceSection />
-        <TechnologySection />
+        {/* <TechnologySection /> */}
         <EducationSection />
         <VoluntarySection />
         <ContactSection />
@@ -165,13 +165,13 @@ const ProjectSection = () => {
     <section ref={ref} className="my-20">
       <div className="mb-7 flex items-center justify-between">
         <h2 className="section-header">Featured Projects</h2>
-        <Button href="/projects" variant="link">
+        {/* <Button href="/projects" variant="link">
           See all projects
-        </Button>
+        </Button> */}
       </div>
       <div className="project-container grid grid-cols-1 gap-8 lg:grid-cols-2">
         {projects.map((project, idx) => (
-          <ProjectCard key={idx} project={project} />
+          <ProjectCard key={idx} project={project} showDots />
         ))}
       </div>
     </section>
@@ -347,14 +347,14 @@ const ContactSection = () => {
 
 const CreditSection = () => {
   return (
-    <section className="mb-16 mt-32 flex justify-center">
-      <div className="mt-2 flex flex-col items-start gap-3 rounded-2xl border border-zinc-800 bg-zinc-900 px-8 py-6 shadow-2xl shadow-black/80 md:flex-row md:items-center">
+    <section className="mb-8 mt-32 flex justify-center">
+      <div className="mt-2 flex flex-col items-start gap-3 rounded-2xl border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm shadow-2xl shadow-black/80 md:flex-row md:items-center">
         <Image
           alt="logo monospace version"
           src="/logo-mono.svg"
           width={10}
           height={10}
-          className="h-10 w-10"
+          className="h-7 w-7"
         />
         <p className="text-gray-300">
           This awesome logo is designed by a talented designer,{' '}
@@ -366,7 +366,6 @@ const CreditSection = () => {
           >
             Kaung Sithu
           </Link>
-          <small className="text-sm text-gray-400"> [Profile on Behance]</small>
         </p>
       </div>
     </section>

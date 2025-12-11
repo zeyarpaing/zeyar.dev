@@ -16,9 +16,12 @@ const ProjectCard: FC<{
     >
       <div
         style={{
-          backgroundImage: `url(${project.media})`,
+          backgroundImage: project.media ? `url(${project.media})` : undefined,
+          backgroundColor: project.media ? undefined : project.color,
         }}
-        className={`bg-primary-foreground relative z-[1] h-[364px] overflow-hidden rounded-2xl bg-contain`}
+        className={`bg-primary-foreground relative z-[1] h-[364px] overflow-hidden rounded-2xl ${
+          project.media ? 'bg-contain' : ''
+        }`}
       >
         <div className={`absolute inset-0 bg-gradient-to-t from-neutral-950/80`}></div>
         <div

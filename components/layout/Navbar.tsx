@@ -15,7 +15,7 @@ const Navbar = () => {
         isExpanded ? 'bg-darkblue/50 backdrop-blur-md' : ''
       } m-layout fixed left-1/2 top-0 z-50 w-full -translate-x-1/2 rounded-b-xl rounded-t-none !px-0 py-3 pt-6 text-white md:relative md:left-0 md:translate-x-0 md:rounded-t-xl md:bg-transparent md:pt-10 md:backdrop-blur-0`}
     >
-      <div className="m-layout relative flex flex-wrap items-center justify-between">
+      <div className="m-layout relative flex flex-wrap items-center justify-center">
         <Link
           aria-label="Go to home page"
           aria-current={router.pathname === '/' ? 'page' : undefined}
@@ -24,7 +24,7 @@ const Navbar = () => {
         >
           <Logo />
         </Link>
-        <button
+        {/* <button
           className="ml-3 inline-flex items-center p-2 text-sm text-gray-500 md:hidden"
           onClick={() => {
             document.body.style.overflow = isExpanded ? 'auto' : 'hidden';
@@ -77,7 +77,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </section>
+        </section> */}
       </div>
 
       {/*<div className="absolute inset-x-0 top-full h-px transition bg-white "></div>*/}

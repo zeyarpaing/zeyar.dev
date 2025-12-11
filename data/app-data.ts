@@ -1,14 +1,14 @@
 import { ContactInfo, NavItem } from '../types';
 
 export const navItems: NavItem[] = [
-  {
-    name: 'Projects',
-    url: '/projects',
-  },
-  {
-    name: 'Blogs',
-    url: '/blogs',
-  },
+  // {
+  //   name: 'Work',
+  //   url: '/projects',
+  // },
+  // {
+  //   name: 'Blogs',
+  //   url: '/blogs',
+  // },
 ];
 
 export const contactInfo: ContactInfo[] = [
