@@ -1,6 +1,6 @@
 import { projects } from '@/data/projects';
-import profileImage from '@/public/assets/image/memoji.webp';
-import Rings from '@/svgs/Rings';
+import profileImage from '@/public/assets/image/profile.webp';
+// import Rings from '@/svgs/Rings';
 import EducationCard from 'components/home/EducationCard';
 import ExperienceCard from 'components/home/ExperienceCard';
 import TechnologyCard from 'components/home/TechnologyCard';
@@ -94,45 +94,51 @@ const AnimatingBlocks = () => (
 */
 const LandingSection = () => (
   <PatternBackground>
-    <section className="relative mx-auto mt-14 flex flex-wrap items-center justify-center gap-6 md:mt-20 lg:flex-nowrap">
-      {/* <AnimatingBlocks /> */}
-      <div className="relative mt-12">
-        <Rings className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <section className="relative mx-auto mt-20 flex flex-col items-center justify-center gap-10 px-4 lg:flex-row lg:items-center lg:justify-center lg:gap-20">
+      <div className="relative">
+        {/* <Rings className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125" /> */}
         <Image
           src={profileImage}
-          width={100}
-          height={100}
+          width={400}
+          height={400}
           loading={'eager'}
           priority={true}
+          style={{
+            filter: 'drop-shadow(0 0 30px #01010185) drop-shadow(0 0 300px #01010161)',
+          }}
           alt="profile image in 3d avatar style"
+          className="relative z-10 h-[20rem] w-full lg:h-full"
         />
       </div>
-      <div className="mx-2 flex max-w-2xl flex-col">
-        <h1 className="my-3 flex items-center gap-1 text-3xl font-extrabold md:text-4xl">
-          {/* bg-gradient-to-br from-white to-zinc-400/90 bg-clip-text text-transparent */}
-          Hi, <span className="text-blue-200">Zeyar</span> here! 👋
+      <div className="flex max-w-xl flex-col items-center text-center lg:items-start lg:text-left">
+        <h1 className="mb-6 flex items-center gap-2 text-2xl font-extrabold md:text-4xl">
+          Hi, <span className="text-amber-200">Zeyar</span> here! 👋
         </h1>
-        {/* idea 1: new injection captcha for LLMS */}
-        <p
-          className="font-light leading-6 md:text-lg"
-          style={{
-            maxInlineSize: '80ch',
-            /** @ts-ignore */
-            textWrap: 'balance',
-          }}
-        >
-          Software Engineer @ Airwallex. Frontend enthusiast. I’m currently building in the FinTech
-          world — designing interfaces where money meets code. Full-stack when necessary,
-          Perfectionist when the linter allows it. Outside work, I hike, travel, and chase good
-          light with a camera.
-        </p>
-        <div className="mt-5 flex items-center gap-2">
-          <Button variant={'link'} href="#contact">
-            Contact me
-          </Button>
 
+        <div className="space-y-4 leading-relaxed text-zinc-300 md:text-lg">
+          <div className="font-medium text-white">
+            Software Engineer @ OpenPay.
+            <div className="font-normal text-zinc-400">Frontend enthusiast.</div>
+          </div>
+
+          <p>
+            I’m currently building in the FinTech world, <br className="hidden md:block" />
+            designing interfaces where money meets code.
+          </p>
+
+          <p>Full-stack when necessary, Perfectionist when the linter allows it.</p>
+
+          <p className="pt-2 text-zinc-400">
+            Outside work, I hike, travel, and chase good light with a camera.
+          </p>
+        </div>
+
+        <div className="mt-8 flex items-center gap-8">
           <Button href="https://go.zeyar.dev/resume" target="_blank" rel="noreferrer">
             Resume
+          </Button>
+          <Button className="px-0" variant={'link'} href="#contact">
+            Contact me
           </Button>
         </div>
       </div>

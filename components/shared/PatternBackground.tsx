@@ -6,7 +6,7 @@ function PatternBackground({ children }: { children: ReactNode; homePage?: boole
     <section>
       <div>{children}</div>
 
-      <div className="absolute inset-0 z-[-1] bg-neutral-500/20 opacity-100 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]">
+      <div className="absolute inset-0 z-[-1] bg-neutral-700/30 opacity-100 [mask-image:radial-gradient(farthest-side_at_right,white,transparent)]">
         <svg
           aria-hidden="true"
           className="fill-white/2.5 absolute inset-x-0 inset-y-[-50%] h-[200%] w-full stroke-white/5 opacity-0 mix-blend-overlay"
